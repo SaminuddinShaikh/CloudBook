@@ -21,5 +21,5 @@ const UserSchema = new Schema({
   },
 });
 
-const User = mongoose.model("user", UserSchema); //First para is used in notes mode for ref do can write 'user' also shown this name in database collection name
+const User = mongoose.model("users", UserSchema); //First para is used in notes mode for ref do can write 'user' also shown this name in database collection name
 module.exports = User;

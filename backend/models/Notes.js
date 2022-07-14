@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const NotesSchema = new Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId, //userId
-    ref: "user", //from user model
+    ref: "users", //from user model
   },
   title: {
     type: String,
