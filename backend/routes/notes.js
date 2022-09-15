@@ -3,9 +3,6 @@ const router = express.Router();
 const Notes = require("../models/Notes");
 const { body, validationResult } = require("express-validator");
 const fetchUser = require("../middleware/fetchUser");
-const {
-  toHaveDescription,
-} = require("@testing-library/jest-dom/dist/matchers");
 
 //ROUTE 1: Get all the notes : GET api end point : /api/notes/fetchnotes login required
 router.get("/fetchnotes", fetchUser, async (req, res) => {
@@ -52,7 +49,7 @@ router.put("/updatenote/:id", fetchUser, async (req, res) => {
     if (title) {
       updatedNote.title = title;
     }
-    if (toHaveDescription) {
+    if (description) {
       updatedNote.description = description;
     }
     if (tag) {
